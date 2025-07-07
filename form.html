@@ -5,26 +5,68 @@
     <title>Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
-
 <body>
     <form action="https://httpbin.org/get" method="get">
+        <fieldset id="ff">
+            <legend>Personal Info</legend>
 
-     <div>
-        <label for="firstName">Name :</label>
-        <input type="text" name="firstName" id="firstName" placeholder="Jane?">
+            <p>
+                <label for="firstName">Name:</label>
+                <input type="text" name="firstName" id="firstName" placeholder="Jane?" required>
+            </p>
 
-        <div id="roll-div">
-        <label for="roll" >Roll :</label>
-        <input type="text" name="roll" id="roll" placeholder="24MTXXX?">
-       </div>
+            <p>
+                <label for="rollInput">Roll:</label>
+                <input type="text" name="roll" id="rollInput" placeholder="24MTXXX?">
+            </p>
 
+            <p>
+                <label for="number">Choose a Number:</label>
+                <input type="number" name="number" id="number" min="0" max="100" step="10" value="10">
+            </p>
 
+            <p>
+                <label for="choose">Are You?</label>
+                <select name="choose" id="choose">
+                    <option value="iit">IITian</option>
+                    <option value="niit">Non-IITian</option>
+                    <option value="ziit">IIT Dholakpur</option>
+                </select>
+            </p>
+        </fieldset>
 
+        <br>
 
+        <fieldset>
+            <legend>Tell Me</legend>
 
+            <p>
+                <input type="radio" name="bmw" id="bmw1" value="bmw">
+                <label for="bmw1">BMW?</label>
+            </p>
+            <p>
+                <input type="radio" name="bmw" id="bmw2" value="audi">
+                <label for="bmw2">Audi?</label>
+            </p>
+            <p>
+                <input type="radio" name="bmw" id="bmw3" value="lamborghini">
+                <label for="bmw3">Lamborghini?</label>
+            </p>
+
+            <p>
+                Do you have pets?
+                <input type="checkbox" id="cat" name="pet" value="cat">
+                <label for="cat">CAT</label>
+
+                <input type="checkbox" id="me" name="pet" value="me">
+                <label for="me">ME</label>
+
+                <input type="checkbox" id="dog" name="pet" value="dog">
+                <label for="dog">DOG</label>
+            </p>
+        </fieldset>
+
+        <button type="submit">Submit</button>
     </form>
 </body>
-
-
 </html>
